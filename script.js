@@ -6,6 +6,7 @@ const category = document.getElementById("category")
 
 // - Selecionando elementos da lista
 const expenseList = document.querySelector("ul")
+const removeButton = document.querySelector("")
 
 // - Selecionando elementos da header do aside
 const expenseQuantity = document.querySelector('aside header p span')
@@ -158,5 +159,27 @@ function updateTotals(newExpense){
   }
 }
 
+//----------: OBSERVANDO O EVENTO DE CLIQUIE NA LISTA - REMOVER ALGUM ITEM DA LISTA
+// Observa o evento que acontecer dentro dessa lista (ul)
+expenseList.addEventListener("click", (event) => { // quando alguem clicar em alguma coisa dessa lista
+  // Verifica se o elemento clicado é o icone de remover
+  if (event.target.classList.contains("remove-icon")) {  // se o elemento clicado contem a classe 'remove-icon'
+    // Obtem a li pai do elemento clicado (item inteiro)
+    const item = event.target.closest(".expense")
+
+    // Remove o item da lista
+    item.remove()
+  }
+
+  // Atualiza os totais
+  updateTotals()
+})
 
 
+// EXPLICANDO: classList é um objeto que possui propriedades
+/*
+  .add() - adiciona uma classe
+  .remove() - remove uma classe
+  .contains() - verifica se contain uma classe
+
+*/
