@@ -1,0 +1,150 @@
+main{
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+
+}
+
+#section-1 {
+  background-color: var(--white);
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  width: 30rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  align-self: flex-start;
+
+  & #head{
+    display: grid;
+    gap: .75rem;
+  }
+
+  & form {
+    display: grid;
+    gap: 1rem;
+
+    & input, select {
+      height: 3rem;
+      border-radius: .5rem;
+      border: 1.5px solid var(--gray-300);
+      padding: .5rem;
+      font: var(--span);
+      color: var(--gray-200);
+    }
+
+    & .title-area{
+      display: grid;
+      gap: .5rem;
+    }
+
+    & .category-price{
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      width: 100%;
+      gap: 1rem;
+      
+      & div {
+        display: grid;
+        gap: .5rem;
+      }
+    }
+
+    & button {
+      background-color: var(--green-100);
+      padding-block: 1rem;
+      border: none;
+      border-radius: .5rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+#section-2 {
+  overflow: auto;
+  background-color: var(--white);
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 2.5rem;
+
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 37.5rem;
+
+  flex: 1;
+  overflow-y: auto;   /* scroll vertical aqui */
+  height: fit-content; 
+
+  & .header2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & .total-title {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      & #circle-gap {
+        background-color: var(--gray-300);
+        width: .25rem;
+        height: .25rem;
+      }
+    }
+
+    & .total-price {
+      display: flex;
+      gap: .25rem;
+    }
+  }
+
+  & .despesas-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  & .despesa {
+    display: flex;
+    justify-content: space-between;
+
+    & .despesa-details{
+      display: flex;
+      height: 2.375rem;
+      gap: .75rem;
+    }
+
+    & .despesa-price {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      & div {
+        display: flex;
+        align-items: end;
+        gap: .25rem;
+      }
+
+      & img {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+}
