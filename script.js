@@ -180,6 +180,8 @@ function formClear() {
   amount.value = ""
   expense.value = ""
   category.value = ""
+
+  expense.focus() // deixando o cursor focado no input
 }
 
 
