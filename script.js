@@ -6,7 +6,6 @@ const category = document.getElementById("category")
 
 // - Selecionando elementos da lista
 const expenseList = document.querySelector("ul")
-const removeButton = document.querySelector("")
 
 // - Selecionando elementos da header do aside
 const expenseQuantity = document.querySelector('aside header p span')
@@ -96,6 +95,7 @@ function expenseAdd(newExpense){
     expenseAmount.prepend(amountSimbol)  // span -> small
 
     updateTotals() // dps de adicionar cada item, chama a função de atualização de quantidade e valor totais
+    formClear()
 
   } catch (error) {
     alert("Não foi possível adicionar a despesa na lista.")
@@ -174,6 +174,18 @@ expenseList.addEventListener("click", (event) => { // quando alguem clicar em al
   // Atualiza os totais
   updateTotals()
 })
+
+//----------: LIMPANDO OS CAMPOS APÓS ADICIONADOS
+function formClear() {
+  amount.value = ""
+  expense.value = ""
+  category.value = ""
+}
+
+
+
+
+
 
 
 // EXPLICANDO: classList é um objeto que possui propriedades
